@@ -7,9 +7,11 @@ import java.util.concurrent.atomic.AtomicLong;
 public class BatchHelper {
 
     private static final String BATCH_PROCESSING_ROOT_URL = "http://artashes-aroyan-local.int.dev.mykronos.com/wfc/restcall/v1/platform/batch_processing";
+//    private static final String BATCH_PROCESSING_ROOT_URL = "http://andranik-hovhannisyan-local.int.dev.mykronos.com/wfc/restcall/v1/platform/batch_processing";
     private static final String GET_ROOT_URL = "?all_details=false";
     private static final String CREATE_ROOT_URL = "/multi_create";
     private static final String DELETE_ROOT_URL = "/multi_delete";
+    private static final String READ_ROOT_URL = "/multi_read";
 
     private static final String BATCH_TASK_ROOT_URL = BATCH_PROCESSING_ROOT_URL.concat("/batch_tasks");
     public static final String BATCH_TASK_GET_URL = BATCH_TASK_ROOT_URL.concat(GET_ROOT_URL);
@@ -25,6 +27,8 @@ public class BatchHelper {
     public static final String BATCH_GROUP_GET_URL = BATCH_GROUP_ROOT_URL.concat(GET_ROOT_URL);
     public static final String BATCH_GROUP_CREATE_URL = BATCH_GROUP_ROOT_URL.concat(CREATE_ROOT_URL);
     public static final String BATCH_GROUP_DELETE_URL = BATCH_GROUP_ROOT_URL.concat(DELETE_ROOT_URL);
+
+    public static final String BATCH_JOB_STATUS_READ_URL = BATCH_PROCESSING_ROOT_URL.concat("/batch_job_status").concat(READ_ROOT_URL);
 
 
     public static String getCookies() {
